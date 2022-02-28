@@ -7,12 +7,12 @@
 # Items commented out are parameters irrelevant to this context
 #   or parameters handled by Video2X internally.
 waifu2x_converter_cpp:
-  path: '/notebooks/video2xlegacy/src/dependencies/waifu2x-converter-cpp/build/waifu2x-converter-cpp'
+  path: '/notebooks/video2x-for-paperspace-gradienty/src/dependencies/waifu2x-converter-cpp/build/waifu2x-converter-cpp'
   #list-supported-formats: null # dump currently supported format list
   #list-opencv-formats: null # (deprecated. Use --list-supported-formats) dump opencv supported format list
   #list-processor # dump processor list
   #output-format: null # The format used when running in recursive/folder mode
-  png-compression: 0 # Set PNG compression level (0-9), 9 = Max compression (slowest & smallest)
+  png-compression: 5 # Set PNG compression level (0-9), 9 = Max compression (slowest & smallest)
   image-quality: -1 # JPEG & WebP Compression quality (-1-101, 0 being smallest size and lowest quality, -1 being default), use 101 for lossless WebP
   block-size: 0 # block size
   disable-gpu: false # disable GPU
@@ -53,9 +53,10 @@ ffmpeg:
     output_options:
       '-vcodec': libx264 # video codec
       '-pix_fmt': 'yuv420p' # overwrite default pixel format
-      '-crf': 0 # H.264 Constant Rate Factor
+      '-crf': 17 # H.264 Constant Rate Factor
       '-b:v': null # target average bitrate
       '-vf': 'pad=ceil(iw/2)*2:ceil(ih/2)*2' # ensure output is divisible by 2, recommended for libx264
+      '-tune': 'animation' # encoding tuning film/animation/grain/stillimage/fastdecode/zerolatency/psnr/ssim
   # Step 3: Streams Migration
   # migrate audio and subtitle streams from original
   #   video into the upscaled video
