@@ -1,5 +1,5 @@
-## ⚠ Notice
-Before you install and use this, I just want to inform that the only driver working here is Waifu2x (Waifu2X-Converter-CPP). If you want to use drivers such as RealSR, please go to the original repository and use Google Colab (Original Notebook Link Below) or PC instead. Thank You!.
+## ⚠ Short Notice
+I don't own anything here. I just removed and modify some files here to make this work on Paperspace Gradient and avoid triggering a lot of errors. Before you install and use this, I just want to inform that the only driver working here is Waifu2x (Waifu2X-Converter-CPP). If you want to use drivers such as RealSR, please go to the original repository and use Google Colab (Original Notebook Link Below) or PC instead. Thank You!.
 This is already tested on Paperspace Gradient Free M4000 GPU'S. You may also try it with other paid GPU's but I can't guarantee that this will work on them.
 
 <p align="center">
