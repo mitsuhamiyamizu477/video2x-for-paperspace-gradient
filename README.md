@@ -1,6 +1,5 @@
 ## ⚠ Short Notice
-I don't own anything here. I just removed and modify some files here to make this work on Paperspace Gradient and avoid triggering a lot of errors. Before you install and use this, I just want to inform that the only driver working here is Waifu2x (Waifu2X-Converter-CPP). If you want to use drivers such as RealSR, please go to the original repository and use Google Colab (Original Notebook Link Below) or PC instead. Thank You!.
-This is already tested on Paperspace Gradient Free M4000 GPU'S. You may also try it with other paid GPU's but I can't guarantee that this will work on them.
+I don't own anything here. I just removed and modify some files here to make this work on Paperspace Gradient and avoid triggering a lot of errors. Before you install and use this, the only driver working here is Waifu2x (Waifu2X-Converter-CPP). If you want to use drivers such as RealSR, please go to the original repository and use Google Colab (Original Notebook Link Below) or PC instead. Thank You!. This is already tested on Paperspace Gradient Free M4000 GPU'S. You may also try it with other paid GPU's but I can't guarantee that this will work on them.
 
 <p align="center">
    <img src="https://user-images.githubusercontent.com/21986859/102733190-872a7880-4334-11eb-8e9e-0ca747f130b1.png"/>
@@ -11,6 +10,15 @@ This is already tested on Paperspace Gradient Free M4000 GPU'S. You may also try
    <img src="https://img.shields.io/github/license/k4yt3x/video2x?style=flat-square"/>
    <img src="https://img.shields.io/badge/dynamic/json?color=%23e85b46&label=Patreon&query=data.attributes.patron_count&suffix=%20patrons&url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F4507807&style=flat-square"/>
 </p>
+
+## Installation:
+1. First, create account first on Paperspace Gradient.
+2. Create A project.
+3. Create your own notebook and use PyTorch runtime with GPU support.
+4. 
+```console
+
+```
 
 ## [💬 Telegram Discussion Group](https://t.me/video2x)
 
