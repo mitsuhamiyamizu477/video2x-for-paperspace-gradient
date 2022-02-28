@@ -1,0 +1,11 @@
+/waifu2x-converter-cpp/build/CMakeFiles/install/local.dir
+/waifu2x-converter-cpp/build/CMakeFiles/install/strip.dir
+/waifu2x-converter-cpp/build/CMakeFiles/waifu2x-converter-cpp.dir
+/waifu2x-converter-cpp/build/CMakeFiles/gensrcs.dir
+/waifu2x-converter-cpp/build/CMakeFiles/install.dir
+/waifu2x-converter-cpp/build/CMakeFiles/list_install_components.dir
+/waifu2x-converter-cpp/build/CMakeFiles/rebuild_cache.dir
+/waifu2x-converter-cpp/build/CMakeFiles/w2xc.dir
+/waifu2x-converter-cpp/build/CMakeFiles/edit_cache.dir
+/waifu2x-converter-cpp/build/CMakeFiles/test.dir
+/waifu2x-converter-cpp/build/CMakeFiles/conv.dir
