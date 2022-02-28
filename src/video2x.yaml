@@ -1,0 +1,96 @@
+# Name: Video2X Configuration File
+# Creator: K4YT3X
+# Date Created: October 23, 2018
+# Last Modified: September 28, 2020
+# Values here are the default values. Change the value here to
+#   save the default value permanently.
+# Items commented out are parameters irrelevant to this context
+#   or parameters handled by Video2X internally.
+waifu2x_converter_cpp:
+  path: '/notebooks/video2xlegacy/src/dependencies/waifu2x-converter-cpp/build/waifu2x-converter-cpp'
+  #list-supported-formats: null # dump currently supported format list
+  #list-opencv-formats: null # (deprecated. Use --list-supported-formats) dump opencv supported format list
+  #list-processor # dump processor list
+  #output-format: null # The format used when running in recursive/folder mode
+  png-compression: 0 # Set PNG compression level (0-9), 9 = Max compression (slowest & smallest)
+  image-quality: -1 # JPEG & WebP Compression quality (-1-101, 0 being smallest size and lowest quality, -1 being default), use 101 for lossless WebP
+  block-size: 0 # block size
+  disable-gpu: false # disable GPU
+  force-OpenCL: false # force to use OpenCL on Intel Platform
+  processor: -1 # set target processor (-1 uses default device)
+  jobs: 5 # number of threads launching at the same time
+  model-dir: null # path to custom model directory (don't append last / ) default: models_rgb
+  #scale-ratio: 2.0 # custom scale ratio
+  noise-level: 3 # <0|1|2|3> noise reduction level
+  mode: noise-scale # <noise|scale|noise-scale> image processing mode
+  log-level: 1 # <0|1|2|3|4> Set log level
+  silent: true # Enable silent mode. (same as --log-level 1)
+  tta: 0 # Enable Test-Time Augmentation mode. (0 or 1)
+  #generate-subdir: 0 # Generate sub folder when recursive directory is enabled.
+  #auto-naming: 0 # Add postfix to output name when output path is not specified.
+  #recursive-directory: 0 # Search recursively through directories to find more images to process.
+  #output: null # path to output image file or directory  (you should use the full path)
+  #input: null # (required) path to input image file or directory (you should use the full path)
+ffmpeg:
+  ffmpeg_path: '/usr/bin/'
+  intermediate_file_name: 'intermediate.mkv'
+  # Step 1: Frame Extraction
+  # extract all frames from original input into temporary directory
+  extract_frames:
+    '-hwaccel': auto # automatically select hardware acceleration method
+    '-y': true
+    input_options: {} # empty dict, expand if necessary
+    output_options:
+      '-pix_fmt': rgb24 # extracted frames pixel format
+      '-qscale:v': null # output image quality control for JPEG (1-31, 1 being highest)
+  # Step 2: Video Assembly
+  # assemble all frames back into a video with only a video track
+  assemble_video:
+    '-hwaccel': auto # automatically select hardware acceleration method
+    '-y': true
+    input_options:
+      '-f': image2 # force image2 format
+    output_options:
+      '-vcodec': libx264 # video codec
+      '-pix_fmt': 'yuv420p' # overwrite default pixel format
+      '-crf': 0 # H.264 Constant Rate Factor
+      '-b:v': null # target average bitrate
+      '-vf': 'pad=ceil(iw/2)*2:ceil(ih/2)*2' # ensure output is divisible by 2, recommended for libx264
+  # Step 3: Streams Migration
+  # migrate audio and subtitle streams from original
+  #   video into the upscaled video
+  migrate_streams:
+    '-hwaccel': auto # automatically select hardware acceleration method
+    '-y': true
+    input_options: {} # empty dict, expand if necessary
+    output_options:
+      '-map':
+        - '0:v?' # copy video streams
+        - '1:a?' # copy audio streams
+        - '1:s?' # copy subtitle streams
+        - '1:d?' # copy data streams
+        - '1:t?' # copy fonts
+      '-c': copy # copy codec for all streams
+      # '-vf': 'minterpolate=''fps=60''' # minterpolate frame interpolation
+      '-map_metadata': 0 # copy known metadata tags
+      # '-movflags': 'use_metadata_tags' # copy custom/arbitrary metadata tags
+      '-pix_fmt': null
+      '-metadata': 'comment=Upscaled by Video2X'
+gifski:
+  gifski_path: '/root/.cargo/bin/'
+  # output: null # Destination file to write to
+  # fps: 20 # Animation frames per second (for PNG frames only) [default: 20]
+  fast: false # 3 times faster encoding, but 10% lower quality and bigger file
+  quality: 100 # Lower quality may give smaller file
+  #width: null # Maximum width
+  #height: null # Maximum height (if width is also set)
+  once: false # Do not loop the GIF
+  nosort: false # Use files exactly in the order given, rather than sorted
+  quiet: false # Do not show a progress bar
+video2x:
+  video2x_cache_directory: null # default: %TEMP%\video2x, directory where cache files are stored, will be deleted if preserve_frames is not set to true
+  extracted_frame_format: png # png/jpg intermediate file format used for extracted frames during video processing
+  output_file_name_format_string: "{original_file_name}_output{extension}" # format string to use for generating output file names
+  image_output_extension: .png # image output extension during batch processing
+  video_output_extension: .mp4 # video output extension during batch processing
+  preserve_frames: false # if set to true, the cache directory won't be cleaned upon task completion

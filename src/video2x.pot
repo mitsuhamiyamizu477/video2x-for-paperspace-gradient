@@ -1,0 +1,375 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-09-14 14:24-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: progress_monitor.py:37
+msgid "Processing: {} (pass {}/{})"
+msgstr ""
+
+#: upscaler.py:149
+msgid "Specified or default cache directory is a file/link"
+msgstr ""
+
+#: upscaler.py:155
+msgid "Creating cache directory {}"
+msgstr ""
+
+#: upscaler.py:158
+msgid "Unable to create {}"
+msgstr ""
+
+#: upscaler.py:163
+msgid "Extracted frames are being saved to: {}"
+msgstr ""
+
+#: upscaler.py:165
+msgid "Upscaled frames are being saved to: {}"
+msgstr ""
+
+#: upscaler.py:175
+msgid "Cleaning up cache directory: {}"
+msgstr ""
+
+#: upscaler.py:180
+msgid "Unable to delete: {}"
+msgstr ""
+
+#: upscaler.py:186 upscaler.py:201 upscaler.py:212
+msgid "Input and output path type mismatch"
+msgstr ""
+
+#: upscaler.py:187
+msgid "Input is multiple files but output is not directory"
+msgstr ""
+
+#: upscaler.py:191
+msgid "Input path {} is neither a file nor a directory"
+msgstr ""
+
+#: upscaler.py:195 upscaler.py:217
+msgid "Input directory and output directory cannot be the same"
+msgstr ""
+
+#: upscaler.py:202
+msgid "Input is single file but output is directory"
+msgstr ""
+
+#: upscaler.py:205
+msgid "No suffix found in output file path"
+msgstr ""
+
+#: upscaler.py:206
+msgid "Suffix must be specified"
+msgstr ""
+
+#: upscaler.py:213
+msgid "Input is directory but output is existing single file"
+msgstr ""
+
+#: upscaler.py:222
+msgid "Input path is neither a file nor a directory"
+msgstr ""
+
+#: upscaler.py:231
+msgid "FFmpeg or FFprobe cannot be found under the specified path"
+msgstr ""
+
+#: upscaler.py:232 upscaler.py:242
+msgid "Please check the configuration file settings"
+msgstr ""
+
+#: upscaler.py:241
+msgid "Specified driver executable directory doesn't exist"
+msgstr ""
+
+#: upscaler.py:268
+msgid "Failed to parse driver argument: {}"
+msgstr ""
+
+#: upscaler.py:288
+msgid "Unrecognized driver: {}"
+msgstr ""
+
+#: upscaler.py:328
+msgid "Starting progress monitor"
+msgstr ""
+
+#: upscaler.py:333
+msgid "Starting upscaled image cleaner"
+msgstr ""
+
+#: upscaler.py:342 upscaler.py:359
+msgid "Killing progress monitor"
+msgstr ""
+
+#: upscaler.py:345 upscaler.py:362
+msgid "Killing upscaled image cleaner"
+msgstr ""
+
+#: upscaler.py:366
+msgid "Terminating all processes"
+msgstr ""
+
+#: upscaler.py:373
+msgid "Main process waiting for subprocesses to exit"
+msgstr ""
+
+#: upscaler.py:392 upscaler.py:396
+msgid "Subprocess {} exited with code {}"
+msgstr ""
+
+#: upscaler.py:402
+msgid "Stop signal received"
+msgstr ""
+
+#: upscaler.py:407
+msgid "Subprocess execution ran into an error"
+msgstr ""
+
+#: upscaler.py:437
+msgid "Loading files into processing queue"
+msgstr ""
+
+#: upscaler.py:438
+msgid "Input path(s): {}"
+msgstr ""
+
+#: upscaler.py:484
+msgid "File MIME type: {}"
+msgstr ""
+
+#: upscaler.py:500
+msgid "File {} ({}) neither an image nor a video"
+msgstr ""
+
+#: upscaler.py:501
+msgid "Skipping this file"
+msgstr ""
+
+#: upscaler.py:526
+msgid "Loaded files into processing queue"
+msgstr ""
+
+#: upscaler.py:529
+msgid "Input file: {}"
+msgstr ""
+
+#: upscaler.py:541
+msgid "Reading file information"
+msgstr ""
+
+#: upscaler.py:550
+msgid "Starting upscaling image"
+msgstr ""
+
+#: upscaler.py:561
+msgid "Starting upscaling video/GIF"
+msgstr ""
+
+#: upscaler.py:572
+msgid "Aborting: No video stream found"
+msgstr ""
+
+#: upscaler.py:581
+msgid "Getting total number of frames in the file"
+msgstr ""
+
+#: upscaler.py:592
+msgid "Calculating scaling parameters"
+msgstr ""
+
+#: upscaler.py:656
+msgid "Framerate: {}"
+msgstr ""
+
+#: upscaler.py:657
+msgid "Width: {}"
+msgstr ""
+
+#: upscaler.py:658
+msgid "Height: {}"
+msgstr ""
+
+#: upscaler.py:659
+msgid "Total number of frames: {}"
+msgstr ""
+
+#: upscaler.py:660
+msgid "Output width: {}"
+msgstr ""
+
+#: upscaler.py:661
+msgid "Output height: {}"
+msgstr ""
+
+#: upscaler.py:662
+msgid "Required scale ratio: {}"
+msgstr ""
+
+#: upscaler.py:663
+msgid "Upscaling jobs queue: {}"
+msgstr ""
+
+#: upscaler.py:680
+msgid "Unsupported pixel format: {}"
+msgstr ""
+
+#: upscaler.py:684
+msgid "Starting to upscale extracted frames"
+msgstr ""
+
+#: upscaler.py:701
+msgid "Upscaling completed"
+msgstr ""
+
+#: upscaler.py:702
+msgid "Average processing speed: {} seconds per frame"
+msgstr ""
+
+#: upscaler.py:705
+msgid "Lanczos downscaling frames"
+msgstr ""
+
+#: upscaler.py:710
+msgid "Downscaling"
+msgstr ""
+
+#: upscaler.py:729
+msgid "Exporting image"
+msgstr ""
+
+#: upscaler.py:739
+msgid "Converting extracted frames into GIF image"
+msgstr ""
+
+#: upscaler.py:743 upscaler.py:752
+msgid "Conversion completed"
+msgstr ""
+
+#: upscaler.py:748
+msgid "Converting extracted frames into video"
+msgstr ""
+
+#: upscaler.py:756
+msgid "Migrating audio, subtitles and other streams to upscaled video"
+msgstr ""
+
+#: upscaler.py:766
+msgid "Failed to migrate streams"
+msgstr ""
+
+#: upscaler.py:767
+msgid "Trying to output video without additional streams"
+msgstr ""
+
+#: upscaler.py:783
+msgid "Output video file exists"
+msgstr ""
+
+#: upscaler.py:787
+msgid "Created temporary directory to contain file"
+msgstr ""
+
+#: upscaler.py:790
+msgid "Writing intermediate file to: {}"
+msgstr ""
+
+#: video2x.py:85
+msgid ""
+"Video2X CLI Version: {}\n"
+"Upscaler Version: {}\n"
+"Author: K4YT3X\n"
+"License: GNU GPL v3\n"
+"Github Page: https://github.com/k4yt3x/video2x\n"
+"Contact: k4yt3x@k4yt3x.com"
+msgstr ""
+
+#: video2x.py:108
+msgid "Video2X Options"
+msgstr ""
+
+#: video2x.py:109
+msgid "show this help message and exit"
+msgstr ""
+
+#: video2x.py:116
+msgid "source video file/directory"
+msgstr ""
+
+#: video2x.py:117
+msgid "output video file/directory"
+msgstr ""
+
+#: video2x.py:119
+msgid "Video2X config file path"
+msgstr ""
+
+#: video2x.py:121
+msgid "log file path"
+msgstr ""
+
+#: video2x.py:122
+msgid "display version, lawful information and exit"
+msgstr ""
+
+#: video2x.py:125
+msgid "Upscaling Options"
+msgstr ""
+
+#: video2x.py:126
+msgid "scaling ratio"
+msgstr ""
+
+#: video2x.py:127
+msgid "output width"
+msgstr ""
+
+#: video2x.py:128
+msgid "output height"
+msgstr ""
+
+#: video2x.py:129
+msgid "upscaling driver"
+msgstr ""
+
+#: video2x.py:130
+msgid "number of processes to use for upscaling"
+msgstr ""
+
+#: video2x.py:131
+msgid "preserve extracted and upscaled frames"
+msgstr ""
+
+#: video2x.py:171
+msgid "This file cannot be imported"
+msgstr ""
+
+#: video2x.py:187
+msgid "Specify either scaling ratio or scaling resolution, not both"
+msgstr ""
+
+#: video2x.py:273
+msgid "Program completed, taking {} seconds"
+msgstr ""
+
+#: video2x.py:277
+msgid "An exception has occurred"
+msgstr ""
+
+#: video2x.py:292
+msgid "The error log file can be found at: {}"
+msgstr ""
+
