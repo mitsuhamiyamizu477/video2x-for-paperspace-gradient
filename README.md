@@ -19,7 +19,7 @@ I don't own anything here. I just removed and modify some files here to make thi
 ```console
 !wget https://raw.githubusercontent.com/nagasechan97/video2x-for-paperspace-gradient/main/Video2X.ipynb
 ```
-5. Open the downloaded notebook and run the first and second code/cell.
+5. Open the downloaded notebook (Video2X.ipynb) and run the first and second code/cell.
 6. Upload your video to persistent storage and change the last code before you run it to start upscaling.
 
 ## [💬 Telegram Discussion Group](https://t.me/video2x)
