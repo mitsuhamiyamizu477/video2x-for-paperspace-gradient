@@ -7,7 +7,7 @@
 # Items commented out are parameters irrelevant to this context
 #   or parameters handled by Video2X internally.
 waifu2x_converter_cpp:
-  path: '/notebooks/video2x-for-paperspace-gradienty/src/dependencies/waifu2x-converter-cpp/build/waifu2x-converter-cpp'
+  path: '/notebooks/video2x-for-paperspace-gradient/src/dependencies/waifu2x-converter-cpp/build/waifu2x-converter-cpp'
   #list-supported-formats: null # dump currently supported format list
   #list-opencv-formats: null # (deprecated. Use --list-supported-formats) dump opencv supported format list
   #list-processor # dump processor list
