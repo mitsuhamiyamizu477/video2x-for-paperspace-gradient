@@ -37,7 +37,6 @@ apt-fast install -y --no-install-recommends ffmpeg libmagic1 nvidia-cuda-toolkit
 apt-fast install -y --no-install-recommends git-core curl wget ca-certificates gnupg2 python3-dev python3-pip python3-setuptools python3-wheel
 
 # install python3 packages
-git clone --recurse-submodules --progress https://github.com/nagasechan97/video2x-for-paperspace-gradient.git --depth=1 /notebooks/video2x
 python3.8 -m pip install -U pip
 python3.8 -m pip install -U -r /notebooks/video2x/src/requirements.txt
 
